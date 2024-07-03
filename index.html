@@ -4,16 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈치과</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>치과</title>
+    <link rel="shortcut icon" href="img/logo.ico">
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".nav_menu > li").hover(function(){
+                $(this).children(".sub").stop().slideDown();
+            }, function(){
+                $(this).children(".sub").stop().slideUp();
+            })/* main_menu li hover */
+
+        })/* jQ end */
+    </script>
 </head>
 
 <body>
     <header class="header">
 
         <div class="logo">
-            <a href=""><!-- img --></a>
+            <a href=""><img src="img/logo.png" alt="logo"></a>
         </div><!-- logo -->
 
         <div class="tittle">
@@ -28,15 +43,15 @@
                     </li>
 
                     <li class="f2">
-                        <a href="#"><img src="img/us.JPG" alt="us"></a>
+                        <a href="wip.html"><img src="img/us.JPG" alt="us"></a>
                     </li>
 
                     <li class="f3">
-                        <a href="#"><img src="img/jp.JPG" alt="jp"></a>
+                        <a href="wip.html"><img src="img/jp.JPG" alt="jp"></a>
                     </li>
 
                     <li class="f4">
-                        <a href="#"><img src="img/cn.JPG" alt="cn"></a>
+                        <a href="wip.html"><img src="img/cn.JPG" alt="cn"></a>
                     </li>
             </ul><!-- flag_menu -->
 
@@ -104,24 +119,108 @@
         </ul><!-- detail_menu1-->
 
         <ul class="detail_menu1_1">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-        </ul>
-
-        <ul class="detail_menu2">
-            <li>04</li>
-            <li>05</li>
-            <li>06</li>
-        </ul><!-- detail_menu1-->
-
-        <ul class="detail_menu2_1">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
+            <li class="dm1_1">
+                <div class="dm1_1txt">환자가 편한 치과</div>
+            </li>
+            <li class="dm1_2">
+                <div class="dm1_2txt">관리가 확실한 치과</div>
+            </li>
+            <li class="dm1_3">
+                <div class="dm1_3txt">치아를 살리는 치과</div>
+            </li>
         </ul>
     </div><!-- detail -->
 
+    <div class="doc_wrap">
+        <h1>눈치과 전문의</h1>
+        <ul class="doc">
+            <li class="doc1">
+                <img src="img/doc1.png" alt="doc1">
+                <div>
+                    <span class="name">김철수</span> <span class="role">대표원장</span> <br>
+                    연세대학교 치과대학, 대학원 졸업 <br>
+                    연세대학교 치과대학원 박사 학위 취득 <br>
+                    연세대학교 치과대학병원 인턴 수료 <br>
+                    임플란트 및 신경치료 전문의
+                </div>
+            </li>
+            <li class="doc2">
+                <img src="img/doc2.png" alt="doc2">
+                <div>
+                    <span class="name">박동현</span> <span class="role">수석원장</span> <br>
+                    연세대학교 치과대학, 대학원 졸업 <br>
+                    연세대학교 치과대학원 박사 학위 취득 <br>
+                    연세대학교 치과대학병원 인턴 수료 <br>
+                    치아교정 전문의
+                </div>
+            </li>
+            <li class="doc3">
+                <img src="img/doc3.png" alt="doc3">
+                <div>
+                    <span class="name">나영희</span> <span class="role">수석원장</span> <br>
+                    연세대학교 치과대학, 대학원 졸업 <br>
+                    연세대학교 치과대학원 박사 학위 취득 <br>
+                    연세대학교 치과대학병원 인턴 수료 <br>
+                    사랑니 및 충치치료 전문의
+                </div>
+            </li>
+            <li class="dog4">
+                <img src="img/dog4.png" alt="dog4">
+                <div>
+                    <span class="name">해피</span> <span class="role">마스코트</span> <br>
+                    애견학교 중퇴 <br>
+                    앉아 수료 <br>
+                    기다려 수료 <br>
+                    환자 심리 안정 전문
+                </div>
+            </li>
+        </ul><!-- doc -->
+    </div><!-- doc_wrap -->
+
+    <div class="address">
+        <h1>오시는 길</h1>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.5613698390657!2d126.91322370562538!3d37.55217191943629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98d7652a05b1%3A0x80fa8e5a8bd6a595!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDslpHtmZTroZwxMeq4uA!5e0!3m2!1sko!2skr!4v1718957369179!5m2!1sko!2skr"
+            class="map">
+        </iframe>
+
+        <ul class="icon">
+            <li class="i1"><img src="img/lo.png" alt="location"></li>
+            <li class="i2"><img src="img/bus.png" alt="bus"></li>
+            <li class="i3"><img src="img/tel.png" alt="tel"></li>
+        </ul><!-- icon -->
+
+        <ul class="addtext">
+            <li>
+                <span>주소</span><br>
+                서울특별시 마포구 <br>
+                양화로 11길 태정빌딩 2층
+            </li>
+            <li>
+                <span>대중교통</span><br>
+                1111(광역)번 합정역 하차<br>
+                2번출구에서 미술관쪽으로 도보 5분
+            </li>
+            <li><span>전화번호</span><br>
+                02-123-1234
+            </li>
+        </ul><!-- addtext -->
+    </div><!-- address -->
+
+    <footer class="footer">
+        <div class="f_txt">
+            <span class="f_txt_1">(주) 눈치과</span><br>
+            법인명(상호) : 눈치과의원 대표자(성명) : 김철수 주소 : 121839 서울특별시 마포구 양화로11길 13 태정빌딩 2층 <br>
+            사업자 등록번호 안내 : [1-11-1111] 전화 : 02-123-1234 팩스 : 02-123-4567 <br>
+            이메일 : kcs@nunchiden.com 개인정보보호책임자 : 김철수(kcs@nunchiden.com)
+        </div><!-- f_txt -->
+
+    </footer>
+    
+    <div class="ff_txt">
+        Copyright © Nden: 눈치과의원. All rights reserved.
+    </div><!-- ff_txt -->
+    
 </body>
 
 </html>

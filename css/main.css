@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .header{
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 1670px;
     height: 100px;
     margin: 50px auto 0;
@@ -15,13 +15,13 @@
 .logo{
     width: 100px;
     height: 100px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     float: left;
 }
 
 .header h1{
     line-height: 100px;
-    margin-left: 20px;
+    margin-left: 100px;
     float: left;
 }
 
@@ -30,7 +30,7 @@
     width: 260px;
     height: 40px;
     margin-top: 30px;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 .flag_menu{
@@ -49,6 +49,7 @@
 .flag_menu li img{
     width: 50px;
     height: 40px;
+    border: 1px solid black;
 }
 
 /* header 끝 */
@@ -56,6 +57,8 @@
 .nav{
     width: 100%;
     height: 70px;
+    margin-top: 10px;
+    border-top: 1px solid lightgrey;
     /* background-color: bisque; */
     /* overflow: hidden; */
 }
@@ -65,13 +68,18 @@
 }
 
 .nav_menu li:hover{
+    /* background-color: #103590; */
+    /* color: white; */
+}
+
+.nav_menu > li:hover > a{
+    border-bottom: 2px solid lightgray;
     background-color: #103590;
     color: white;
 }
 
-.nav_menu li:hover .sub{
-    background-color: #103590;
-    color: white;
+
+.nav_menu > li:hover .sub{
 }
 
 .nav_menu > li{
@@ -86,10 +94,8 @@
 
 .nav_menu > li a{
     display: block;
-}
-
-.nav_menu li:hover .sub{
-    display: block;
+    /* background-color: #103590; */
+    /* color: white; */
 }
 
 .sub{
@@ -100,6 +106,8 @@
 
 .sub li a{
     font-size: 10pt;
+    background-color: #103590;
+    color: white;
 }
 
 .sub li a:hover{
@@ -112,15 +120,17 @@
     width: 100%;
     height: 600px;
     background: url('../img/m3.jpg') no-repeat center center;
+    margin-bottom: 10px;
 }
 
 /* main 끝 */
 
 .detail{
     width: 1500px;
-    height: 800px;
+    height: 400px;
     margin: 0 auto;
-    background-color: aquamarine;
+    position: relative;
+    /* background-color: aquamarine; */
 }
 
 .detail_menu1{
@@ -129,76 +139,240 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
+    position: absolute;
+    z-index: 3;
+    top: -50px;
+    left: 0;
 }
 
 .detail_menu1 li{
-    width: 110px;
-    height: 110px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #103590;
     text-align: center;
-    line-height: 110px;
+    line-height: 50px;
     display: inline-block;
-    border: 5px solid black;
+    border: 3px solid black;
+    color: white;
 }
 
 .detail_menu1_1{
     overflow: hidden;
     width: 1500px;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: space-around;
 }
 
 .detail_menu1_1 li{
     width: 500px;
-    height: 300px;
-    line-height: 300px;
+    height: 400px;
+    line-height: 400px;
     display: inline-block;
     text-align: center;
 }
 
 .detail_menu1 li:nth-child(odd){
     background-color: white;
+    color: black;
 }
 
-.detail_menu2{
-    overflow: hidden;
-    width: 1500px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
+.detail_menu1_1{
+    position: absolute;
+    /* background-color: bisque; */
+    z-index: 2;
+    top: 0;
+    left: 0;
 }
 
-.detail_menu2 li{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background-color: #103590;
-    text-align: center;
-    line-height: 110px;
-    display: inline-block;
-    border: 5px solid black;
+.dm1_1{
+    background: url('../img/01.png');
 }
 
-.detail_menu2 li:nth-child(even){
-    background-color: white;
+.dm1_2{
+    background: url('../img/02.png');
 }
 
-.detail_menu2_1{
-    overflow: hidden;
-    width: 1500px;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
+.dm1_3{
+    background: url('../img/03.png');
 }
 
-.detail_menu2_1 li{
-    width: 500px;
-    height: 300px;
-    line-height: 300px;
-    display: inline-block;
-    text-align: center;
+.detail_menu1_1 > li > div{
+    margin-top: 150px;
 }
 
 /* detail 끝 */
+
+.doc_wrap{
+    width: 100%;
+    height: 700px;
+    margin-top: 100px;
+    /* background-color: aquamarine; */
+}
+
+.doc_wrap h1{
+    text-align: center;
+    background-color: #103590;
+    color: white;
+}
+
+.doc{
+    margin-top: 100px;
+    width: 1920px;
+    /* background-color: #103590; */
+    height: 500px;
+}
+
+.doc li{
+    width: 480px;
+    height: 500px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.name{
+    font-size: 14pt;
+    letter-spacing: 2pt;
+}
+
+.role{
+    color: #103590;
+    font-size: 12pt;
+}
+
+.doc > li:hover > div{
+    animation: mov1 1s forwards;
+}
+
+.doc > li > div{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+.doc1 div{
+    text-align: right; 
+    font-size: 10pt;
+}
+
+.doc2 div{
+    text-align: center; 
+    font-size: 10pt;
+}
+
+.doc3 div{
+    text-align: center; 
+    font-size: 10pt;
+}
+
+.dog4 div{
+    text-align-last: left;
+    font-size: 10pt;
+}
+
+
+@keyframes mov1{
+    0%{
+        top: 500px;
+        left: 0;
+    }
+
+    100%{
+        top: 370px;
+        left: 0;
+    }
+}
+
+/* doc wrap 끝 */
+
+.address{
+    margin-top: 50px;
+    text-align: center;
+    height: 550px;
+    position: relative;
+}
+
+.address h1{
+    margin-bottom: 20px;
+    background-color: #103590;
+    color: white;
+}
+
+.map{
+    width: 1200px;
+    height: 300px;
+}
+
+.icon li{
+}
+
+.i1 img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 530px;
+}
+
+.i2 img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 930px;
+}
+
+.i3 img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 535px;
+}
+
+.addtext{
+    width: 1200px;
+    height: 250px;
+    /* background-color: #103590; */
+    margin: 60px auto 0;
+}
+
+.addtext li{
+    width: calc(100% / 3);
+    height: 100%;
+    /* background-color: #103590; */
+    float: left;
+}
+
+.addtext li span{
+    font-size: 18pt;
+}
+
+/* address 끝 */
+
+.footer{
+    margin-top: 150px;
+    width: 100%;
+    height: 110px;
+    background-color: darkgray;
+    /* text-align: center; */
+    padding-left: 500px;
+}
+
+.f_txt{
+    padding-top: 30px;
+    color: white;
+    font-size: 8pt;
+}
+
+.f_txt_1{
+    font-size: 16pt;
+}
+
+.ff_txt{
+    font-size: 8pt;
+    height: 30px;
+    line-height: 30px;
+    background-color: dimgray;
+    padding-left: 500px;
+}
